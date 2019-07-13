@@ -21,7 +21,8 @@ export class Tab2Page implements OnInit{
       sample: "awdawd"
     }
     this.method.postData(data,"add-person.php").subscribe(Response =>{
-      
+      let res = Response.json()
+      console.log(res)
     })
 
   }

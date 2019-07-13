@@ -19,7 +19,7 @@ export class GlobalMethodsService {
     fixedPixelsBottom: 0
    }
 
-   server: string = "http://192.168.1.16:80/tracker/"
+   server: string = "http://192.168.1.16:80/tracker/track_server/"
   constructor(private nativePageTransitions: NativePageTransitions,private navCtrl: NavController,public http: Http) { }
   leaveTransition(){
     this.nativePageTransitions.slide(this.options)
