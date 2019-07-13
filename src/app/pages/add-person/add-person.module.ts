@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { AddPersonPage } from './add-person.page';
 import{HeaderModule} from '../../sharing/header/header.module'
+import {PersonFormComponent} from '../../pages-components/person-form/person-form.component'
 const routes: Routes = [
   {
     path: '',
@@ -22,6 +23,11 @@ const routes: Routes = [
     HeaderModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AddPersonPage]
+  declarations: [AddPersonPage,PersonFormComponent],
+  entryComponents:[
+    PersonFormComponent
+  ],exports:[
+    AddPersonPage
+  ]
 })
 export class AddPersonPageModule {}

@@ -11,19 +11,13 @@ export class Tab2Page implements OnInit{
   add:boolean = true
 
 @ViewChild('holder', {read: ViewContainerRef}) holder: ViewContainerRef;
-  constructor(public method: GlobalMethodsService, private componentFactoryResolver: ComponentFactoryResolver) {
+  constructor(public method: GlobalMethodsService,private componentFactoryResolver: ComponentFactoryResolver) {
     
   }
   ngOnInit(){
     const childComponent_var = this.componentFactoryResolver.resolveComponentFactory(PersonListComponent)
     this.holder.createComponent(childComponent_var)
-    let data = {
-      sample: "awdawd"
-    }
-    this.method.postData(data,"add-person.php").subscribe(Response =>{
-      let res = Response.json()
-      console.log(res)
-    })
+     
 
   }
   
