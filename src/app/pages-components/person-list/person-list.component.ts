@@ -11,7 +11,7 @@ export class PersonListComponent implements OnInit {
   constructor(public method: GlobalMethodsService) { }
 
   ngOnInit() {
-
+ 
     
   }
 
